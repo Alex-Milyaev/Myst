@@ -1,0 +1,558 @@
+/* fonts */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('MontserratRegular'), local('Montserrat-Regular'),
+    url("../fonts/montserrat-regular-webfont.woff") format("woff"),
+    url("../fonts/montserrat-regular-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('MontserratSemibold'), local('Montserrat-Semibold'),
+    url("../fonts/montserrat-semibold-webfont.woff") format("woff"),
+    url("../fonts/montserrat-semibold-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('MontserratBOld'), local('Montserrat-Bold'),
+    url("../fonts/montserrat-bold-webfont.woff") format("woff"),
+    url("../fonts/montserrat-bold-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('OpenSansSemibold'), local('OpenSans-Semibold'),
+    url("../fonts/opensans-semibold-webfont.woff") format("woff"),
+    url("../fonts/opensans-semibold-webfont.woff2") format("woff2");
+}
+
+/* common specification */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: #374048;
+    --green-color: #00c660;
+    --blue-color: #5eb7bb;
+    --white-color: #ffffff;
+}
+
+body {
+    font-family: 'Montserrat', sans-Serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.btn {
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: var(--green-color);
+    color: var(--white-color);
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 16px 60px;
+    border: none;
+}
+
+.container {
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 0 15px 0 80px;
+}
+
+/* header */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    z-index: 50;
+}
+.header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--white-color);
+    z-index: 2;
+}
+
+.header__container {
+    position: relative;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    z-index: 3;
+}
+
+.header__burger {
+    display: none;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.nav__item:not(:last-child) {
+    margin-right: 35px;
+}
+
+.nav__item:last-child {
+    margin-right: 60px;
+}
+
+.nav__link {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--blue-color);
+    text-transform: uppercase;
+}
+
+.header__btn {
+    font-size: 16px;
+    padding: 8px 30px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+  
+.modal-content {
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin: 15% auto;
+    width: 490px;
+    height: 472px;
+    border-radius: 7px;
+}
+  
+.modal__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+    color: #2E2D35;
+}
+
+.close {
+    color: #918D9A;
+    float: right;
+    font-size: 29px;
+    cursor: pointer;
+}
+  
+
+/* hero */
+.hero {
+    background: url(../img/hero-bg.png) no-repeat;
+    background-size: 100%;
+    background-color: #f0eae6;
+    height: 640px;
+    margin-top: 98px;
+}
+
+.hero__container {
+    padding-top: 70px;
+}
+
+.hero-content {
+    max-width: 390px;
+}
+
+.hero__title {
+    font-family: 'OpenSans';
+    font-size: 31px;
+    line-height: 38px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #0c4b88;
+}
+
+.hero__descr {
+    font-family: 'OpenSans';
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+}
+
+.hero__btn {
+    margin-top: 20px;
+}
+
+.hero-xrt {
+    font-size: 33px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #8e8e8e;
+    margin: 50px 0 0;
+}
+
+.xrt-descr {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #07899c;
+}
+
+/* reviews */
+
+.reviews__container {
+    padding: 0 15px;
+}
+
+.reviews__title {
+    font-family: 'OpenSans';
+    font-size: 46.1px;
+    line-height: 57px;
+    font-weight: 600;
+    color: #0c4b88;
+    text-align: center;
+}
+
+.reviews__descr {
+    width: 45%;
+    margin: 40px auto;
+    font-size: 23px;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+}
+
+.reviews__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.reviews__item {
+    width: 355px;
+    max-height: 730px;
+    margin-bottom: 15px;
+}
+
+.reviews__item:not(:last-child) {
+    margin-right: 15px;
+}
+
+.reviews-img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.reviews-article__inner {
+    display: flex;
+    align-items: center;
+}
+
+.customer-name {
+    margin-right: 15px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+}
+
+.reviews-descr {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+@media (max-width: 1200px) {
+    .header {
+        height: 80px;
+    }
+    .header__container {
+        height: 80px;
+    }
+    .hero {
+        margin-top: 78px;
+        height: 507px;
+    }
+    .hero__container {
+        padding-top: 20px;
+    }
+    .hero-content {
+        max-width: 335px;
+    }
+    .hero__title {
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .hero__descr {
+        font-size: 24px;
+    }
+    .hero__btn {
+        margin-top: 10px;
+    }
+    .hero-xrt {
+        font-size: 26px;
+        line-height: 20px;
+        margin: 25px 0 0;
+    }
+    .xrt-descr {
+        font-size: 17px;
+        line-height: 19px;
+    }
+    .reviews__title {
+        font-size: 32px;
+    }
+    .reviews__descr {
+        width: 50%;
+        margin: 30px auto;
+        font-size: 20px;
+    }
+    .customer-name {
+        font-size: 16px;
+    }
+    .reviews-descr {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .reviews__item {
+        width: 315px;
+    }
+}
+
+@media (max-width: 768px) {
+    body.lock {
+        overflow: hidden;
+    }
+    .header {
+        height: 60px;
+    }
+    .header__container {
+        height: 60px;
+    }
+    .nav {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        transition: all 0.3s ease 0s;
+        background-color: #f0eae6;
+        padding: 70px 10px 20px 10px;
+    }
+    .nav._active {
+        top: 0;
+    }
+    .nav__list{
+        display: block;
+    }
+    .nav__list li{
+        margin: 0 0 20px 0;
+    }
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 18px;
+        height: 15px;
+        z-index: 3;
+    }
+    .header__burger span {
+        position: absolute;
+        background-color: #5a6269;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        top: 6px;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger:before,
+    .header__burger:after {
+        content: '';
+        background-color: #5a6269;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger:before {
+        top: 0;
+    }
+    .header__burger:after {
+        bottom: 0;
+    }
+    .header__burger._active span {
+        transform:scale(0);
+    }
+    .header__burger._active:before {
+        transform:rotate(45deg);
+        top: 6px;
+    }
+    .header__burger._active:after {
+        transform:rotate(-45deg);
+        bottom: 6px;
+    }
+    .header__btn {
+        font-size: 10.7px;
+        line-height: 11px;
+        padding: 8px 30px;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 2;
+        margin-right: 40px;
+    }
+    .hero {
+        margin-top: 59px;
+        height: 355px;
+    }
+    .hero-content {
+        max-width: 260px;
+        padding-top: 10px;
+    }
+    .container {
+        max-width: 1900px;
+        margin: 0 auto;
+        padding: 0 15px 0 15px;
+    }
+    .hero__title {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .hero__descr {
+        font-size: 18px;
+    }
+    .hero__btn {
+        font-size: 10.7px;
+        line-height: 11px;
+        padding: 15px 55px;
+        margin-top: 40px;
+    }
+    .hero-xrt {
+        display: none;
+    }
+    .xrt-descr {
+        font-size: 15px;
+        line-height: 16px;
+    }
+    .reviews__item {
+        width: 350px;
+        max-height: 730px;
+    }
+    .reviews__descr {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    
+}
+
+@media (max-width: 376px) {
+    .header__btn {
+        margin-right: 30px;
+    }
+    .hero {
+        background: url(../media-img/layer_15_59.png) 100% 100% no-repeat;
+        background-size: 100%;
+        background-color: #f0eae6;
+        height: 840px;
+    }
+    .hero__title {
+        font-size: 25.6px;
+        line-height: 28px;
+    }
+    .hero-content {
+        max-width: 345px;
+    }
+    .hero__descr {
+        font-size: 23px;
+        line-height: 33px;
+    }
+    .hero__btn {
+        margin-left: 25%;
+        margin-top: 0px;
+    }
+    .hero-xrt {
+        display: block;
+        font-size: 31.4px;
+        line-height: 17px;
+    }
+    .xrt-descr {
+        font-size: 12.5px;
+        line-height: 17px;
+    }
+    .reviews__container {
+        background-color: #000000;
+    }
+    .reviews__title {
+        font-size: 24px;
+        line-height: 57px;
+        margin: 0;
+    }
+    .reviews__descr {
+        width: 100%;
+        text-align: center;
+        font-size: 17px;
+        line-height: 20px;
+    }
+    .reviews__item:not(:last-child) {
+        margin-right: 0px;
+    }
+    .reviews__item {
+        max-height: 640px;
+    }
+}
